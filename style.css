@@ -25,18 +25,36 @@ nav {
   position: fixed;
 }
 .navLogo {
-  height: 0px;
-  width: 26%;
-  border-bottom: 76px solid #540d7e;
-  border-right: 60px solid transparent;
-  margin-right: 60px;
+  height: 108%;
+  width: 30%;
+  background: hsla(270, 78%, 33%, 1);
+
+  background: linear-gradient(360deg, hsla(270, 78%, 33%, 1) 34%, hsla(293, 54%, 45%, 1) 86%);
+  
+  background: -moz-linear-gradient(360deg, hsla(270, 78%, 33%, 1) 34%, hsla(293, 54%, 45%, 1) 86%);
+  
+  background: -webkit-linear-gradient(360deg, hsla(270, 78%, 33%, 1) 34%, hsla(293, 54%, 45%, 1) 86%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#531294", endColorstr="#a135af", GradientType=1 );;
   display: flex;
+  position: relative;
+
 }
 .navLogo img {
   width: 95px;
   height: 45px;
   margin-top: 18px;
-  margin-left: 10px;
+  margin-left: 5.5%;
+}
+#triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 75px 75px 0;
+  border-color: transparent rgb(255, 255, 255) transparent transparent;
+  transform: rotate(0deg);
+  position: absolute;
+  right: -1px;
 }
 .navBtn {
   display: flex;
@@ -46,27 +64,39 @@ nav {
   width: 45%;
   margin-right: 60px;
 }
+.navbarBtnDiv1 , .navbarBtnDiv2 , .navbarBtnDiv3 , .navbarBtnDiv4 {
+  position: relative;
+}
 /* labels begins*/
 .navLabeClasses {
-  background-color: #681996;
-  width: 15px;
+  background-color: #540d7e;
+  width: 45px;
   height: 3px;
-  bottom: -1px;
+  bottom: -25px;
   position: absolute;
 }
 #navLabel1Id{
-  left: 150px;
+  left: 37px;
+  /* opacity: 0; */
 }
 #navLabel2Id{
-  left: 40px;
+  left: 45px;
+  /* opacity: 0; */
 }
 #navLabel3Id{
-  left: 30px;
+  left: 38px;
+  /* opacity: 0; */
 }
 #navLabel4Id{
-  left: 20px;
+  left: 53px;
+  /* opacity: 0; */
 }
 /* label ends */
+/* #navbarBtnA1 , #navbarBtnA2 , #navbarBtnA3 , #navbarBtnA4 {
+
+} */
+
+
 .navBtn a:hover {
   color: #681996;
   transition-duration: 0.5s;

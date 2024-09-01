@@ -5,6 +5,15 @@ document.body.append(containerTag);
 const mainDiv = document.createElement('div');
 mainDiv.id = ('main');
 containerTag.append(mainDiv);
+const leftDiv = document.createElement('div')
+leftDiv.id = 'leftDiv'
+mainDiv.append(leftDiv)
+//
+const leftDivImg = document.createElement('img')
+leftDivImg.id = 'leftDivImg';
+leftDivImg.src = "./docs/dd2c927be9d6377dfae2215b91e3a4f4.gif"
+leftDiv.append(leftDivImg)
+//
 const mainRightDiv = document.createElement('div');
 mainRightDiv.id = ('mainRight');
 mainDiv.append(mainRightDiv);
@@ -44,12 +53,13 @@ iq.textContent = 'IQ 120'
 iq.id='IQ'
 result.append(iq)
 const iqDescription = document.createElement('p')
-iqDescription.textContent = 'Thank you for taking the IQ test! Your score suggests average intelligence. While this might not be what you expected, remember that IQ tests only measure certain skills.Everyone has unique strengths,but remember you are Dumb!You Alone Are The Monkey One' 
+// we use inner html to allow us use HTML tags(like <br>)
+iqDescription.innerHTML = 'Thank you for taking the IQ test!<br>Your score suggests average intelligence. While this might not be what you expected, remember that IQ tests only measure certain skills.Everyone has unique strengths,but remember you are Dumb!You Alone Are The Monkey One..' 
 result.append(iqDescription)
 // personIconImg.src = "docs/image.png2.png";
 const startAgainBtn = document.createElement('a');
 startAgainBtn.id = ('startAgainBtn');
-startAgainBtn.href = "./testPage/testPages.html";
+startAgainBtn.href = "/ghostPage/start/fixed start/testPage/testPages.html";
 startAgainBtn.textContent = "Start Again";
 boxDiv.append(startAgainBtn);
 const mainLeftDiv = document.createElement('div');

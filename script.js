@@ -18,55 +18,75 @@ navbar.append(navbarLogo)
 const navbarLogoImg = document.createElement('img')
 navbarLogoImg.src = './docs/Component 1.png'
 navbarLogo.append(navbarLogoImg)
+//triangle div
+const triangle = document.createElement('div')
+triangle.id = 'triangle'
+navbarLogo.append(triangle)
 ///second div for nav btns(has a*4 within it)
 const navbarBtn = document.createElement('div')
 navbarBtn.classList.add('navBtn')
 navbar.append(navbarBtn)
-/// nav labels(new to adjust)
-// label 1
+// first a div
+const navbarBtnDiv1 = document.createElement('div')
+navbarBtnDiv1.classList.add('navbarBtnDiv1')
+navbarBtn.append(navbarBtnDiv1)
+//first a
+const navbarBtn1A = document.createElement('a')
+navbarBtn1A.id = 'navbarBtnA1'
+navbarBtn1A.href = '#main1'
+navbarBtn1A.onclick = () => navLabel(navLabel1);
+navbarBtn1A.textContent = 'Home'
+navbarBtnDiv1.append(navbarBtn1A)
+// first a label
 const navLabel1 = document.createElement('div')
 navLabel1.id = 'navLabel1Id'
 navLabel1.classList.add('navLabeClasses')
-navbarBtn.append(navLabel1)
-// label 2
+navbarBtnDiv1.append(navLabel1)
+// second a div
+const navbarBtnDiv2 = document.createElement('div')
+navbarBtnDiv2.classList.add('navbarBtnDiv2')
+navbarBtn.append(navbarBtnDiv2)
+// second a
+const navbarBtnA2 = document.createElement('a')
+navbarBtnA2.href = '#main3'
+navbarBtnA2.onclick = () => navLabel(navLabel2);
+navbarBtnA2.textContent = 'About Us'
+navbarBtnDiv2.append(navbarBtnA2)
+// second a label
 const navLabel2 = document.createElement('div')
 navLabel2.id = 'navLabel2Id'
 navLabel2.classList.add('navLabeClasses')
-navbarBtn.append(navLabel2)
-// label 3
+navbarBtnDiv2.append(navLabel2)
+// third a div
+const navbarBtnDiv3 = document.createElement('div')
+navbarBtnDiv3.classList.add('navbarBtnDiv3')
+navbarBtn.append(navbarBtnDiv3)
+// third a
+const navbarBtnA3 = document.createElement('a')
+navbarBtnA3.href = '#';
+navbarBtnA3.onclick = () => navLabel(navLabel3);
+navbarBtnA3.textContent = 'IQ Test'
+navbarBtnDiv3.append(navbarBtnA3)
+// third a label
 const navLabel3 = document.createElement('div')
 navLabel3.id = 'navLabel3Id'
 navLabel3.classList.add('navLabeClasses')
-navbarBtn.append(navLabel3)
+navbarBtnDiv3.append(navLabel3)
+// fprth a div
+const navbarBtnDiv4 = document.createElement('div')
+navbarBtnDiv4.classList.add('navbarBtnDiv4')
+navbarBtn.append(navbarBtnDiv4)
+// forth a
+const navbarBtnA4 = document.createElement('a')
+navbarBtnA4.href = '#contactUs'
+navbarBtnA4.onclick = () => navLabel(navLabel4);
+navbarBtnA4.textContent = 'Contact Us'
+navbarBtnDiv4.append(navbarBtnA4)
 // label 4
 const navLabel4 = document.createElement('div')
 navLabel4.id = 'navLabel4Id'
 navLabel4.classList.add('navLabeClasses')
-navbarBtn.append(navLabel4)
-/// end of labels
-//first a
-const navbarBtnA1 = document.createElement('a')
-navbarBtnA1.id = 'navbarBtnA1'
-navbarBtnA1.href = '#main1'
-navbarBtnA1.textContent = 'Home'
-
-navbarBtn.append(navbarBtnA1)
-// second a
-const navbarBtnA2 = document.createElement('a')
-navbarBtnA2.href = '#main3'
-navbarBtnA2.textContent = 'About Us'
-navbarBtn.append(navbarBtnA2)
-//third a
-const navbarBtnA3 = document.createElement('a')
-navbarBtnA3.href = '#';
-navbarBtnA3.onclick = ghostPageEnter;
-navbarBtnA3.textContent = 'IQ Test'
-navbarBtn.append(navbarBtnA3)
-//forth a
-const navbarBtnA4 = document.createElement('a')
-navbarBtnA4.href = '#contactUs'
-navbarBtnA4.textContent = 'Contact Us'
-navbarBtn.append(navbarBtnA4)
+navbarBtnDiv4.append(navLabel4)
 ///third div is for search engine(has img*1 input*1)
 const navbarSearch = document.createElement('div')
 navbarSearch.classList.add('navSearch')
@@ -485,6 +505,19 @@ main5TagcontactUsFooterBox_preLeftAndRight_Right_Div3A.href = '#'
 main5TagcontactUsFooterBox_preLeftAndRight_Right_Div3A.textContent = 'admin@gmail.com'
 main5TagcontactUsFooterBox_preLeftAndRight_Right_Div3.append(main5TagcontactUsFooterBox_preLeftAndRight_Right_Div3A)
 // js convert ends
+
+// Array for labels
+let navLabels = [navLabel1, navLabel2, navLabel3, navLabel4];
+// Defining navbarLaeb function in order to change colors when selected
+function navLabel(selectedLabel) {
+  // using foreach method to selec every one of em(navlabels) and making them invisible(opacity 0)
+  navLabels.forEach(label => {
+    label.style.opacity = '0';
+  });
+  //making the selected label in navbar appear
+  selectedLabel.style.opacity = '1'
+}
+
 
 //function to redirect user to ghost page
 function ghostPageEnter() {
